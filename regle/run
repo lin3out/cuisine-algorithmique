@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+#
+#  Copyright (c)  2019 Charline Outters
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+#
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+import os
+import subprocess
+import shlex
+from inginious import feedback
+from inginious import input
+
+
+if __name__ == "__main__":
+    os.chdir("student")
+    input.parse_template("regle.py")
+
+    p = subprocess.Popen(shlex.split("python3 regle.py"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+    make_output = p.communicate()[0].decode('utf-8')
+    
+    # Le code ne fonctionne pas
+    if p.returncode:
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Ça ne fonctionne pas. Vérifie que tu as bien emboité les blocs.\n")
+        exit(0)
+    
+    if make_output == "False\n":
+	# Le code ne donne pas la bonne réponse
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Tu n'obtiens pas le bon résultat. Vérifie ce que tu as fait.")
+        
+    else:
+	#Le code est un succès
+        feedback.set_global_result("success")
+        feedback.set_global_feedback("Bravo, tu as réussi !\n" +make_output)

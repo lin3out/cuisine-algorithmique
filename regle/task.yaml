@@ -1,0 +1,133 @@
+accessible: true
+author: Charline Outters
+context: |-
+    Maintenant qu'on se rappelle du fonctionnement d'une règle de trois, il est temps de calculer les quantités nécessaires pour faire le gâteau pour plus de 2 personnes. A toi de voir pour combien de personnes tu veux faire la recette.
+
+    **Recette pour deux personnes**
+
+    - 45gr de farine
+
+    - 45gr de sucre
+
+    - 45gr de beurre
+
+    - 1 oeuf
+
+    - 3gr de levure chimique
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: La règle de trois
+network_grading: false
+problems:
+    regle:
+        options:
+            oneBasedIndex: true
+            speed: '60'
+            grid:
+                length: 3
+                spacing: 20
+                colour: '#ccc'
+                snap: true
+            zoom:
+                maxScale: 3.0
+                scaleSpeed: 1.2
+                minScale: 0.3
+                startScale: 1.0
+                controls: true
+                wheel: false
+            media: plugins/blockly/static/blockly/media/
+            maxBlocks: Infinity
+            toolboxPosition: start
+            css: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">quantite calculee</variable>
+                <variable type="">parts voulues</variable>
+                <variable type="">parts prevues</variable>
+                <variable type="">quantite ingredient</variable>
+              </variables>
+
+
+
+
+
+
+
+
+
+
+
+            <category name="Boucle" colour="120">
+              <variables></variables>
+              <block type="boucle_fr"></block>
+            </category><category name="Variable" colour="330">
+              <variables>
+                <variable type="">parts_prevues</variable>
+                <variable type="">quantite_ingredient</variable>
+                <variable type="">parts_voulues</variable>
+                <variable type="">quantite_calculee</variable>
+              </variables>
+              <block type="var_ing">
+                <field name="ingredients">farine</field>
+              </block>
+              <block type="var_parts">
+                <field name="parts">parts_prevues</field>
+              </block>
+              <block type="var_quant"></block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">parts_prevues</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">quantite_calculee</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">quantite_ingredient</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">parts_voulues</field>
+              </block>
+            </category><category name="Math" colour="230">
+              <variables></variables>
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+              <block type="math_arithmetic">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <value name="B">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </category><category name="Condition" colour="210">
+              <variables></variables>
+              <block type="ingredients"></block>
+            </category><category name="Instruction" colour="30">
+              <variables></variables>
+              <block type="choix"></block>
+            </category></xml>
+        name: Effectue la règle de trois pour calculer la quantité pour chaque ingrédient
+        type: blockly
+        workspace: <xml></xml>
+        header: ''
+        blocks_files:
+        - custom.js
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

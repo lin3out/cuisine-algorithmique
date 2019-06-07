@@ -1,0 +1,76 @@
+accessible: true
+author: Charline Outters
+context: |-
+    C'est le moment d'être créatif ! Tu vas pouvoir créer tes propres brochettes de fruits pour te régaler ! Fais attention, les pics à brochette doivent contenir 7 morceaux de fruits, pas plus, pas moins. Mais tu peux choisir ce que tu mets dessus.
+
+    Tu as beaucoup de blocs à ta disposition mais tu ne dois pas tous les utiliser. A toi de réfléchir aux blocs qui sont utiles ou non, mais n'oublie pas que le thème de la séance, c'est les boucles ;)
+
+    **Attention**
+    Chaque fois que tu veux créer une nouvelle brochette, tu dois recommencer un programme. Tu ne peux pas faire plusieurs brochettes en même temps.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Les brochettes de fruits
+network_grading: false
+problems:
+    brochette:
+        options:
+            scrollbars: true
+            zoom:
+                controls: true
+                maxScale: 3.0
+                minScale: 0.3
+                startScale: 1.0
+                scaleSpeed: 1.2
+                wheel: false
+            css: true
+            toolboxPosition: start
+            media: plugins/blockly/static/blockly/media/
+            grid:
+                length: 3
+                spacing: 20
+                colour: '#ccc'
+                snap: true
+            oneBasedIndex: true
+            maxBlocks: Infinity
+            speed: '60'
+        blocks_files:
+        - custom.js
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+            <category name="Boucle" colour="120">
+              <variables></variables>
+              <block type="jusqua"></block>
+              <block type="times_fr"></block>
+            </category><category name="Logique" colour="210">
+              <variables></variables>
+              <block type="fin_pic"></block>
+            </category><category name="Math" colour="225">
+              <variables></variables>
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </category><category name="Instruction" colour="30">
+              <variables></variables>
+              <block type="pic"></block>
+              <block type="element">
+                <field name="fruits">fraise</field>
+              </block>
+              <block type="ajout"></block>
+            </category></xml>
+        type: blockly
+        workspace: <xml></xml>
+        header: ''
+        name: Fais tes brochettes de fruits !
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

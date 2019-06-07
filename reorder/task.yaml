@@ -1,0 +1,78 @@
+accessible: true
+author: Charline Outters
+context: |
+    Cet exercice est simple, mais il te permettra de comprendre comment fonctionne INGInious. Réorganise les différents blocs pour reformer la recette de la tartine au chocolat. La recette est la suivante :
+
+    - Ouvrir le sachet de pain
+    - Prendre une tartine
+    - Poser la tartine sur l'assiette
+    - Ouvrir le pot de chocolat
+    - Prendre le couteau
+    - Tremper le couteau dans le chocolat
+    - Tartiner le chocolat sur la tartine
+    - Poser le couteau
+    - Plier la tartine
+    - La manger !
+
+    N'hésite pas à faire des erreurs pour voir ce que fait INGInious dans ce cas-là.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Initiation à INGInious
+network_grading: false
+problems:
+    reorder:
+        options:
+            oneBasedIndex: true
+            zoom:
+                minScale: 0.3
+                maxScale: 3.0
+                controls: true
+                scaleSpeed: 1.2
+                startScale: 1.0
+                wheel: false
+            scrollbars: true
+            css: true
+            grid:
+                snap: true
+                colour: '#ccc'
+                spacing: 20
+                length: 3
+            media: plugins/blockly/static/blockly/media/
+            maxBlocks: Infinity
+            toolboxPosition: start
+            speed: '60'
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="nb1"></block>
+              <block type="nb6"></block>
+              <block type="nb4"></block>
+              <block type="nb2"></block>
+              <block type="nb3"></block>
+              <block type="nb7"></block>
+              <block type="nb9"></block>
+              <block type="nb8"></block>
+              <block type="nb5"></block>
+              <block type="nb10"></block>
+            </xml>
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+            </xml>
+        blocks_files:
+        - custom_blocks.js
+        type: blockly
+        header: ''
+        name: Replace les blocs dans le bon ordre
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

@@ -1,0 +1,78 @@
+accessible: true
+author: Charline Outters
+context: |-
+    C'est fatiguant de devoir regarder l'arbre de décision pour chaque gâteau. Et si on faisait un programme qui peut déterminer si un gâteau a bien été fait selon l'arbre de décision ou pas? T'es partant ? Allons-y !
+
+    Pour rappel, l'arbre de décision ressemblait à ceci :
+
+          .. image:: arbre/arbre.png
+               :height: 300px
+
+    Utilise les blocs pour programmer l'arbre de décision. Pour t'aider, on a déjà mis les premiers blocs.
+    Tu dois simplement déterminer les cas où le gâteau est valide.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '3'
+    output: '2'
+    memory: '100'
+name: Les conditions
+network_grading: false
+order: 1
+problems:
+    arbre:
+        options:
+            css: true
+            media: /static/common/js/blockly/media/
+            trashcan: true
+            zoom:
+                startScale: 1.0
+                scaleSpeed: 1.2
+                controls: true
+                minScale: 0.3
+                maxScale: 3.0
+                wheel: false
+            sounds: true
+            grid:
+                length: 3
+                snap: true
+                colour: '#ccc'
+                spacing: 20
+            speed: '60'
+            toolboxPosition: start
+            oneBasedIndex: true
+            scrollbars: true
+            maxBlocks: ''
+        type: blockly
+        blocks_files:
+        - blocks.js
+        header: |-
+            Utilise les blocs pour programmer l'arbre de décision. Pour t'aider, on a déjà mis les premiers blocs.
+            Tu dois simplement déterminer les cas où le gâteau est valide.
+        name: L'arbre de décision à gâteau
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml" id="workspaceBlocks"
+            style="display:none"></xml>
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="valide"></block>
+              <block type="condition"></block>
+              <block type="egalite_gateau">
+                <field name="gateau">nature</field>
+              </block>
+              <block type="egalite_glacage">
+                <field name="glacage">rose</field>
+              </block>
+              <block type="egalite_deco">
+                <field name="deco">fraises</field>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

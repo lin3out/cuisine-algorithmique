@@ -1,0 +1,86 @@
+accessible: true
+author: Charline Outters
+context: |-
+    A la séance dernière, vous vous êtes triés selon la première lettre de vos noms de famille. On va maintenant programmer ce tri ensemble !
+
+    **Petit rappel de la méthode utilisée**
+
+    - Il y a une file d'attente avec tous les enfants et une rangée qui est vide au départ.
+
+    - Le premier de la file d'attente va comparer la première lettre de son nom de famille avec la personne de la rangée en face de lui, si il y en a une.
+
+    - Si la lettre du premier de la file d'attente est plus petite (donc se trouve avant dans l'alphabet), alors le reste de la rangée se décale et le premier de la file d'attente prend la place de celui avec qui il a fait la comparaison
+
+    - Sinon, le premier de la file d'attente se décale pour faire face à l'enfant suivant (si il y en a un) et lui pose la même question.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: Tri des élèves
+network_grading: false
+problems:
+    tri:
+        options:
+            maxBlocks: Infinity
+            grid:
+                colour: '#ccc'
+                spacing: 20
+                length: 3
+                snap: true
+            zoom:
+                controls: true
+                scaleSpeed: 1.2
+                maxScale: 3.0
+                minScale: 0.3
+                startScale: 1.0
+                wheel: false
+            scrollbars: true
+            speed: '60'
+            oneBasedIndex: true
+            media: plugins/blockly/static/blockly/media/
+            css: true
+            toolboxPosition: start
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+
+
+
+
+
+
+
+
+
+            <category name="Boucle" colour="105">
+              <variables></variables>
+              <block type="boucle_fr"></block>
+            </category><category name="Condition" colour="210">
+              <variables></variables>
+              <block type="cond_fr"></block>
+              <block type="file_non_vide"></block>
+              <block type="rangee_non_vide"></block>
+              <block type="lettre_plus_petite"></block>
+            </category><category name="Instruction simple" colour="30">
+              <variables></variables>
+              <block type="first"></block>
+              <block type="d_calage"></block>
+              <block type="premier_d_cale"></block>
+              <block type="placement"></block>
+            </category></xml>
+        header: ''
+        blocks_files:
+        - blocks.js
+        name: Trie les élèves par ordre alphabétique
+        workspace: <xml></xml>
+        type: blockly
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

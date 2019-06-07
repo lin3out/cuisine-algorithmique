@@ -1,0 +1,19 @@
+accessible: false
+name: Algorithmes et recettes de cuisine
+description: |+
+    Ce cours a été développé dans le cadre d'un mémoire sur la didactique de l'informatique. Les activités présentes ici s'inscrivent dans une séquence de cours plus conséquente qui n'est pour le moment pas accessible à tous.
+
+admins:
+- ''
+tutors: []
+groups_student_choice: false
+use_classrooms: true
+allow_unregister: true
+allow_preview: false
+registration: true
+registration_password: null
+registration_ac: null
+registration_ac_list: []
+is_lti: false
+lti_keys: {}
+lti_send_back_grade: false
